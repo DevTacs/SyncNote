@@ -11,6 +11,7 @@ import {
 import {User, Mail, Lock} from "lucide-react"
 import {FcGoogle} from "react-icons/fc"
 import AuthInput from "@/components/auth/input"
+import AuthForm from "@/components/auth/form"
 
 export const Route = createFileRoute("/auth/register")({
     component: RouteComponent,
@@ -37,39 +38,9 @@ function RouteComponent() {
                 </CardHeader>
 
                 <CardContent className="mt-5">
-                    <form className="space-y-5">
-                        {/* Username */}
-                        <AuthInput
-                            label="username"
-                            type="text"
-                            placeholder="Enter your username"
-                            name="username"
-                            Icon={User}
-                        />
-
-                        {/* Email */}
-                        <AuthInput
-                            label="Email"
-                            type="email"
-                            placeholder="Enter your email"
-                            name="email"
-                            Icon={Mail}
-                        />
-
-                        {/* Password */}
-                        <AuthInput
-                            label="Password"
-                            type="password"
-                            placeholder="Enter your password"
-                            name="password"
-                            Icon={Lock}
-                        />
-
-                        <Button className="w-full py-5 text-foreground bg-accent hover:bg-accent/80">
-                            Create account
-                        </Button>
-                    </form>
+                    <AuthForm />
                 </CardContent>
+
                 <CardFooter className="flex flex-col gap-3 bg-card">
                     <Button
                         variant="outline"
