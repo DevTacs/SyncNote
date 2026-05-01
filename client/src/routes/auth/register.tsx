@@ -8,9 +8,7 @@ import {
     CardHeader,
     CardTitle,
 } from "@/components/ui/card"
-import {User, Mail, Lock} from "lucide-react"
 import {FcGoogle} from "react-icons/fc"
-import AuthInput from "@/components/auth/input"
 import AuthForm from "@/components/auth/form"
 
 export const Route = createFileRoute("/auth/register")({
