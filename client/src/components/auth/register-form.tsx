@@ -2,7 +2,7 @@ import AuthInput from "./input"
 import {Lock, Mail, User} from "lucide-react"
 import {Button} from "../ui/button"
 
-export default function AuthForm() {
+export default function RegisterForm() {
     return (
         <form className="space-y-5">
             {/* Username */}

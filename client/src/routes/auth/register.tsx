@@ -9,7 +9,7 @@ import {
     CardTitle,
 } from "@/components/ui/card"
 import {FcGoogle} from "react-icons/fc"
-import AuthForm from "@/components/auth/form"
+import AuthForm from "@/components/auth/register-form"
 
 export const Route = createFileRoute("/auth/register")({
     component: RouteComponent,
