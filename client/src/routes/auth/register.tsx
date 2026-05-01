@@ -8,10 +8,9 @@ import {
     CardHeader,
     CardTitle,
 } from "@/components/ui/card"
-import {Input} from "@/components/ui/input"
-import {Label} from "@/components/ui/label"
 import {User, Mail, Lock} from "lucide-react"
 import {FcGoogle} from "react-icons/fc"
+import AuthInput from "@/components/auth/input"
 
 export const Route = createFileRoute("/auth/register")({
     component: RouteComponent,
@@ -40,57 +39,31 @@ function RouteComponent() {
                 <CardContent className="mt-5">
                     <form className="space-y-5">
                         {/* Username */}
-                        <div className="space-y-2">
-                            <Label
-                                htmlFor="username"
-                                className="text-foreground">
-                                Username
-                            </Label>
-                            <div className="relative">
-                                <User className="absolute left-3 top-3 h-4 w-4 text-foreground/50   " />
-                                <Input
-                                    id="username"
-                                    placeholder="Enter your username"
-                                    className="pl-9 py-5 text-foreground border border-foreground/50"
-                                />
-                            </div>
-                        </div>
+                        <AuthInput
+                            label="username"
+                            type="text"
+                            placeholder="Enter your username"
+                            name="username"
+                            Icon={User}
+                        />
 
                         {/* Email */}
-                        <div className="space-y-2">
-                            <Label htmlFor="email" className="text-foreground">
-                                Email
-                            </Label>
-                            <div className="relative">
-                                <Mail className="absolute left-3 top-3 h-4 w-4 text-foreground/50" />
-                                <Input
-                                    id="email"
-                                    type="email"
-                                    placeholder="Enter your email"
-                                    className="pl-9 py-5 text-foreground border border-foreground/50"
-                                />
-                            </div>
-                        </div>
+                        <AuthInput
+                            label="Email"
+                            type="email"
+                            placeholder="Enter your email"
+                            name="email"
+                            Icon={Mail}
+                        />
 
                         {/* Password */}
-                        <div className="space-y-2">
-                            <div className="flex items-center justify-between">
-                                <Label
-                                    htmlFor="password"
-                                    className="text-foreground">
-                                    Password
-                                </Label>
-                            </div>
-                            <div className="relative">
-                                <Lock className="absolute left-3 top-3 h-4 w-4 text-foreground/50" />
-                                <Input
-                                    id="password"
-                                    type="password"
-                                    placeholder="Enter your password"
-                                    className="pl-9 py-5 text-foreground border border-foreground/50"
-                                />
-                            </div>
-                        </div>
+                        <AuthInput
+                            label="Password"
+                            type="password"
+                            placeholder="Enter your password"
+                            name="password"
+                            Icon={Lock}
+                        />
 
                         <Button className="w-full py-5 text-foreground bg-accent hover:bg-accent/80">
                             Create account
